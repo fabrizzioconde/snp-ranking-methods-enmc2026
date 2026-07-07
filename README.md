@@ -36,12 +36,12 @@ Comparação de seis métodos de ordenamento de SNPs (*Single Nucleotide Polymor
 
 ### Pacotes R
 
-| Pacote | Finalidade |
-|--------|-----------|
-| `scrime` | Simulação de dados genotípicos (`simulateSNPglm`) |
-| `randomForest` | Ajuste da Random Forest e cálculo das importâncias |
-| `care` | Cálculo do CAR Score e da Correlação Marginal (`carscore`) |
-| `corpcor` | Correlação Parcial shrinkage (`pcor.shrink`, `estimate.lambda`) |
+| Pacote         | Finalidade                                                        |
+| -------------- | ----------------------------------------------------------------- |
+| `scrime`       | Simulação de dados genotípicos (`simulateSNPglm`)                 |
+| `randomForest` | Ajuste da Random Forest e cálculo das importâncias                |
+| `care`         | Cálculo do CAR Score e da Correlação Marginal (`carscore`)        |
+| `corpcor`      | Correlação Parcial shrinkage (`pcor.shrink`, `estimate.lambda`)   |
 
 Os pacotes são instalados automaticamente pelo script `utils.R` caso não estejam presentes.
 
