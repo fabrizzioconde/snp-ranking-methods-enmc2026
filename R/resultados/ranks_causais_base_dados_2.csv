@@ -1,0 +1,9 @@
+"SNP","rank_Marginal","rank_Parcial","rank_CAR","rank_IScore","rank_Permutation","rank_Impureza"
+"SNP1",1,1,1,1,1,1
+"SNP2",4,3,3,2,4,4
+"SNP3",9,15,8,28,7,7
+"SNP4",2,2,2,3,2,3
+"SNP5",5,5,5,4,3,2
+"SNP6",90,40,66,95,8,71
+"SNP7",25,9,15,6,6,6
+"SNP8",3,4,4,5,5,5
