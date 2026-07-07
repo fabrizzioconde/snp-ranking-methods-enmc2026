@@ -82,9 +82,9 @@ pdflatex main.tex
 
 ## Autores
 
-- Joao Vitor Barreto Baptista (UFF)
+- João Vitor Barreto Baptista (UFF)
 - Thiago Jordem Pereira (UFF)
-- Fabrizzio Conde de Oliveira (UFF)
+- Fabrízzio Condé de Oliveira (UFF)
 
 ## Licenca
 
