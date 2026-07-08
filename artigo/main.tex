@@ -216,9 +216,7 @@ O \textit{CAR Score} (\textit{Correlation-Adjusted Score}) é um método de orde
 \omega = P^{-1/2}P_{XY},
 \end{equation}
 
-\noindent em que $P$ é a matriz de correlação das variáveis explicativas e $P_{XY}$ é o vetor de correlações marginais entre as variáveis explicativas e a variável resposta.
-
-\cite{ZuberStrimmer2011}
+\noindent em que $P$ é a matriz de correlação das variáveis explicativas e $P_{XY}$ é o vetor de correlações marginais entre as variáveis explicativas e a variável resposta. Esse critério foi proposto por \citeonline{ZuberStrimmer2011} como uma alternativa que leva em conta a multicolinearidade entre os preditores ao atribuir relevância a cada variável.
 
 \subsection{I Score}
 
@@ -230,9 +228,7 @@ O \textit{I Score} (\textit{Importance Score}) é um método de ordenamento de v
     {\sum_{i=1}^{n}(Y_i-\overline{Y})^2}.
 \end{equation}
 
-\noindent em que $\overline{Y}$ representa a média da variável resposta, $\overline{Y_j}$ é a média da resposta para a $j$-ésima categoria da variável explicativa, $n_j$ é o número de observações nessa categoria, $n$ é o número total de observações e $s^2$ é a variância da variável resposta.
-
-\cite{Lo2015}
+\noindent em que $\overline{Y}$ representa a média da variável resposta, $\overline{Y_j}$ é a média da resposta para a $j$-ésima categoria da variável explicativa, $n_j$ é o número de observações nessa categoria, $n$ é o número total de observações e $s^2$ é a variância da variável resposta. Esse método foi introduzido por \citeonline{Lo2015} para a seleção de variáveis em dados com preditores categóricos.
 
 \subsection{Importância por Permutação (Permutation Importance)}
 
@@ -244,9 +240,7 @@ A Importância por Permutação, também conhecida como \textit{Permutation Impo
 
 \noindent em que $B$ é o número de árvores da floresta, $OOB_b$ é o conjunto de observações \textit{out-of-bag} da árvore $T_b$ (isto é, as observações não utilizadas no ajuste de $T_b$), $y_i$ é o valor observado do fenótipo, $\hat{y}_i^{(b)}$ é o valor predito para a observação $i$ pela árvore $T_b$ e $\hat{y}_i^{(b,\pi_j)}$ é o valor predito para a mesma observação após a permutação aleatória dos valores de $X_j$ entre as observações de $OOB_b$.
 
-Quanto maior o aumento do erro de predição após a permutação de uma variável, maior é sua relevância para o processo preditivo. Dessa forma, o método é capaz de identificar variáveis importantes mesmo na presença de relações não lineares e interações entre preditores.
-
-\citep{breiman2001random, Strobl2007, Strobl2008}
+Quanto maior o aumento do erro de predição após a permutação de uma variável, maior é sua relevância para o processo preditivo. Dessa forma, o método é capaz de identificar variáveis importantes mesmo na presença de relações não lineares e interações entre preditores~\citep{breiman2001random, Strobl2007, Strobl2008}.
 
 \subsection{Importância por Impureza (Mean Decrease Impurity)}
 
@@ -262,9 +256,7 @@ A Importância por Impureza, também conhecida como \textit{Mean Decrease Impuri
     \Delta i(t) = RSS(t) - \left[ \frac{n_{tL}}{n_t} RSS(t_L) + \frac{n_{tR}}{n_t} RSS(t_R) \right],
 \end{equation}
 
-\noindent em que $t_L$ e $t_R$ são os nós filhos esquerdo e direito gerados pela divisão de $t$.
-
-\citep{breiman2001random, Scornet2023}
+\noindent em que $t_L$ e $t_R$ são os nós filhos esquerdo e direito gerados pela divisão de $t$. Essa medida foi proposta originalmente por \citeonline{breiman2001random} e suas propriedades teóricas foram analisadas por \citeonline{Scornet2023}.
 
 As duas medidas descritas nesta e na subseção anterior são extraídas de uma única \textit{Random Forest} ajustada para cada base de dados com a função \texttt{randomForest} do pacote homônimo do R, utilizando $B = 4\,000$ árvores, $mtry = \lfloor p/3 \rfloor$ e os demais hiperparâmetros em seus valores padrão (\texttt{nodesize} $= 5$, \texttt{replace = TRUE}, \texttt{sampsize} $= n$). A Importância por Permutação corresponde ao \texttt{\%IncMSE} e a Importância por Impureza ao \texttt{IncNodePurity}. Uma semente fixa (\texttt{seed = 123}) foi utilizada em todas as etapas, garantindo a reprodutibilidade dos resultados. Todas as análises computacionais deste estudo foram realizadas no ambiente estatístico R~\citep{R}.
 
