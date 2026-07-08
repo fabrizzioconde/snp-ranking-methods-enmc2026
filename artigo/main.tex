@@ -198,17 +198,15 @@ t = r_{X_iY} \sqrt{\frac{n-2}{1 - r_{X_iY}^2}},
 
 \subsection{Correlação Parcial}
 
-O segundo método considerado neste trabalho é a correlação parcial, que quantifica a associação linear entre uma variável explicativa e a variável resposta após remover o efeito linear das demais variáveis explicativas. Essa medida é definida por
+O segundo método considerado neste trabalho é a correlação parcial, que quantifica a associação linear entre uma variável explicativa e a variável resposta após remover o efeito linear das demais variáveis explicativas. No caso de duas variáveis explicativas, essa medida é definida por
 
 \begin{equation}
 \rho_{Y, X_1 | X_2} =
 \frac{\rho_{YX_1} - \rho_{YX_2}\rho_{X_{1}X_{2}}}
-{\sqrt{(1-\rho_{YX_2}^2)(1-\rho_{X_{1}X_{2}}^2)}}.
+{\sqrt{(1-\rho_{YX_2}^2)(1-\rho_{X_{1}X_{2}}^2)}},
 \end{equation}
 
-\noindent em que $\rho_{Y,X_1|X_2}$ representa a correlação parcial entre $Y$ e $X_1$ condicionada a $X_2$, $\rho_{YX_1}$ e $\rho_{YX_2}$ são as correlações marginais entre $Y$ e as variáveis $X_1$ e $X_2$, respectivamente, e $\rho_{X_1X_2}$ é a correlação entre as variáveis explicativas.
-
-\cite{schafer2005}
+\noindent em que $\rho_{Y,X_1|X_2}$ representa a correlação parcial entre $Y$ e $X_1$ condicionada a $X_2$, $\rho_{YX_1}$ e $\rho_{YX_2}$ são as correlações marginais entre $Y$ e as variáveis $X_1$ e $X_2$, respectivamente, e $\rho_{X_1X_2}$ é a correlação entre as variáveis explicativas. No caso geral com $p$ variáveis, a correlação parcial entre $Y$ e $X_i$ condicionada às $p-1$ variáveis restantes é obtida a partir da inversa da matriz de correlação, conforme o estimador com \emph{shrinkage} proposto por \citeonline{schafer2005}.
 
 \subsection{CAR Score}
 
